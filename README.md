@@ -1,6 +1,11 @@
 # lstm
 用于lstm预测股票模型
 
+##########下载沪深300历史数据######
+https://blog.csdn.net/a19990412/article/details/82733291
+
+
+###########虚拟环境################
 激活可以运行代码的虚拟环境
 conda activate xxx
 
