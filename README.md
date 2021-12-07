@@ -29,5 +29,5 @@ conda克隆环境
 conda create -n new_env --clone old_env
 
 
-
-
+###############安装tushar################
+pip install  -i https://pypi.doubanio.com/simple/  --trusted-host pypi.doubanio.com    --target=c:\users\dk\anaconda3\envs\lstm\lib\site-packages  tushare
