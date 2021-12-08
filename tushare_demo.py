@@ -20,8 +20,12 @@ df = pro.daily(ts_code='002264.SZ', start_date='20210101', end_date='20211207')
 # df = pro.daily(trade_date='20180810')
 
 # print(df)
+df.dropna()
+df.to_csv('C:/Users/DK/Desktop/LSTM/lstm/sh300.csv')
 
-df.to_csv('C:/Users/DK/Desktop/LSTM/lstm/sh.csv')
+print(df.columns)
+
+print(df.describe())
 
 # df = pro.trade_cal(exchange='', start_date='20180901', end_date='20181001', fields='exchange,cal_date,is_open,pretrade_date', is_open='0')
 
