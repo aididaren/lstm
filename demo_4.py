@@ -36,16 +36,16 @@ df=df.apply(lambda x:(x-min(x))/(max(x)-min(x)))
 # 那么X对应的sequence=3 ， [ input_size=5(5维度) ，这tm就是nlp中每个词的embedding ]
  
 total_len=df.shape[0]
-sequence=200
+sequence=60
 X=[]
 Y=[]
 for i in range(df.shape[0]-sequence):
     X.append(np.array(df.iloc[i:(i+sequence),].values,dtype=np.float32))
     Y.append(np.array(df.iloc[(i+sequence),1],dtype=np.float32))
  
-print('X[0]:\n')
+print('X[0]:')
 print(X[0])
-print('Y[0]:\n')
+print('Y[0]:')
 print(Y[0])
 
 
@@ -133,6 +133,6 @@ for idx, (x, label) in enumerate(test_loader):
  
 import matplotlib.pyplot as plt
  
-plt.plot([ele*(close_max-close_min)+close_min for ele in preds[0:50]],"r",label="pred")
-plt.plot([ele*(close_max-close_min)+close_min for ele in labels[0:50]],"b",label="real")
+plt.plot([ele*(close_max-close_min)+close_min for ele in preds[0:200]],"r",label="pred")
+plt.plot([ele*(close_max-close_min)+close_min for ele in labels[0:200]],"b",label="real")
 plt.show()
