@@ -8,7 +8,9 @@ ts.set_token('726e1ea55025ba6def26cdcaba3e8531b29e6c50e6ea36e0f034b2e9')
 
 pro = ts.pro_api()
 
-df = pro.daily(ts_code='002264.SZ', start_date='20210101', end_date='20211207')
+# df = pro.daily(ts_code='000300', start_date='20210101', end_date='20211226')
+# df = pro.index_basic(market='SZSE')
+
 
 # #多个股票
 # df = pro.daily(ts_code='000001.SZ,600000.SH', start_date='20180701', end_date='20180718')
@@ -21,7 +23,7 @@ df = pro.daily(ts_code='002264.SZ', start_date='20210101', end_date='20211207')
 
 # print(df)
 df.dropna()
-df.to_csv('C:/Users/DK/Desktop/LSTM/lstm/sh300.csv')
+df.to_csv('C:/Users/dk/Desktop/课程系统/2021秋/LSTM/lstm/sh300.csv')
 
 print(df.columns)
 
@@ -30,4 +32,3 @@ print(df.describe())
 # df = pro.trade_cal(exchange='', start_date='20180901', end_date='20181001', fields='exchange,cal_date,is_open,pretrade_date', is_open='0')
 
 # df = pro.query('trade_cal', exchange='', start_date='20180901', end_date='20181001', fields='exchange,cal_date,is_open,pretrade_date', is_open='0')
-
