@@ -8,7 +8,7 @@ ts.set_token('726e1ea55025ba6def26cdcaba3e8531b29e6c50e6ea36e0f034b2e9')
 
 pro = ts.pro_api()
 
-# df = pro.daily(ts_code='000300', start_date='20210101', end_date='20211226')
+df = pro.daily(ts_code='601888.SH', start_date='20200707', end_date='20211226')
 # df = pro.index_basic(market='SZSE')
 
 
@@ -23,7 +23,7 @@ pro = ts.pro_api()
 
 # print(df)
 df.dropna()
-df.to_csv('C:/Users/dk/Desktop/课程系统/2021秋/LSTM/lstm/sh300.csv')
+df.to_csv('C:/Users/dk/Desktop/课程系统/2021秋/LSTM/lstm/sh.csv')
 
 print(df.columns)
 
